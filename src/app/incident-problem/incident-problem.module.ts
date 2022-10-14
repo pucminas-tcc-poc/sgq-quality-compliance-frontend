@@ -4,17 +4,21 @@ import { AppMaterialModule } from '../shared/app-material/app-material.module'
 
 import { IncidentProblemRoutingModule } from './incident-problem-routing.module';
 import { IncidentProblemsComponent } from './incident-problems/incident-problems.component';
+import { IncidentProblemsFormComponent } from './incident-problems-form/incident-problems-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
-    IncidentProblemsComponent
+    IncidentProblemsComponent,
+    IncidentProblemsFormComponent
   ],
   imports: [
     CommonModule,
     IncidentProblemRoutingModule,
-    AppMaterialModule
+    AppMaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class IncidentProblemModule { }

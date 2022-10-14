@@ -1,0 +1,45 @@
+<mat-card>
+
+  <mat-toolbar color="primary">Cadastro</mat-toolbar>
+
+  <mat-card-content>
+    <form [formGroup]="form">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Titulo" fromGroupName="title">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Descrição" fromGroupName="description">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Tipo</mat-label>
+        <mat-select fromGroupName="type">
+          <mat-option value="vehicle">Veículo</mat-option>
+          <mat-option value="part">Peça</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Local" fromGroupName="place">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Impacto" fromGroupName="damage">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Peça" fromGroupName="part">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Veiculo" fromGroupName="vehicle">
+      </mat-form-field>
+
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Salvar</button>
+    <button mat-button (click)="onCancel()">Cancelar</button>
+  </mat-card-actions>
+</mat-card>
