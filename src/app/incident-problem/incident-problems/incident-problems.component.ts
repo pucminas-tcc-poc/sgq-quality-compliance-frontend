@@ -12,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class IncidentProblemsComponent implements OnInit {
 
   incidentsProblemsDTO: Observable<IncidentProblemDTO[]>;
-  displayedColumns = ['_id','title','type', 'creation', 'actions'];
+  displayedColumns = ['id','description','type', 'creation', 'actions'];
 
   constructor(private incicidentsProblemsService: IncidentsProblemsService, private router:Router, private route:ActivatedRoute) {
     this.incidentsProblemsDTO = incicidentsProblemsService.list();

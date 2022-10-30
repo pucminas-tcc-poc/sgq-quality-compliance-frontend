@@ -6,7 +6,7 @@ export interface IncidentProblem {
   type: string,
   place: string,
   damage: number,
-  creation: Date,
+  creation: String,
   update: Date,
   part: number,
   vehicle: number,

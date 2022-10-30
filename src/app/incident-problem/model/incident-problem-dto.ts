@@ -1,6 +1,12 @@
 export interface IncidentProblemDTO {
-  _id: number,
-  title: string,
+  id: number,
+  description: string,
+  status: string,
   type: string,
-  creation: string
+  place: string,
+  damage: string,
+  part: string,
+  vehicle: string,
+  nonCompliance: string,
+  creationDate: string
 }

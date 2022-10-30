@@ -8,12 +8,16 @@ import { tap, take } from 'rxjs/operators'
 })
 export class IncidentsProblemsService {
 
-  private readonly API = '/assets/incidents.json';
+  private readonly API = '/api/compliance/api/v1/incidents';
 
   constructor( private httpClient: HttpClient) { }
 
   list() {
     return this.httpClient.get<IncidentProblemDTO[]>(this.API)
           .pipe(take(1), tap(incidents => console.log(incidents)));
+  }
+
+  save(){
+
   }
 }

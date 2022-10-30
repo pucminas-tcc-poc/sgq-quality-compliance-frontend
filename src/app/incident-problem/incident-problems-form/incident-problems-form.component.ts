@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,FormGroup } from '@angular/forms';
+import { FormBuilder,FormGroup, FormControlName } from '@angular/forms';
 
 
 @Component({
@@ -13,13 +13,13 @@ export class IncidentProblemsFormComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
-      title: [null],
       description: [null],
+      status:[null],
       type: [null],
       place: [null],
       damage: [null],
       part: [null],
-      vehicle: [null]
+      nonCompliance: [null]
     })
   }
 
@@ -27,7 +27,7 @@ export class IncidentProblemsFormComponent implements OnInit {
   }
 
   onSubmit() {
-
+    console.log(this.form.value);
   }
 
   onCancel() {

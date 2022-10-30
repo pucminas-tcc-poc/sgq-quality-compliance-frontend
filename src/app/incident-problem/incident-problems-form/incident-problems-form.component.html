@@ -5,35 +5,48 @@
   <mat-card-content>
     <form [formGroup]="form">
       <mat-form-field class="full-width">
-        <input matInput placeholder="Titulo" fromGroupName="title">
+        <textarea matInput placeholder="Descrição" formControlName="description"></textarea>
       </mat-form-field>
 
       <mat-form-field class="full-width">
-        <input matInput placeholder="Descrição" fromGroupName="description">
+        <mat-label>Status</mat-label>
+        <mat-select formControlName="status">
+          <mat-option value="OPEN">OPEN</mat-option>
+          <mat-option value="CLOSED">CLOSED</mat-option>
+        </mat-select>
       </mat-form-field>
+
 
       <mat-form-field class="full-width">
         <mat-label>Tipo</mat-label>
-        <mat-select fromGroupName="type">
-          <mat-option value="vehicle">Veículo</mat-option>
-          <mat-option value="part">Peça</mat-option>
+        <mat-select formControlName="type">
+          <mat-option value="INCIDENT">INCIDENT</mat-option>
+          <mat-option value="DEFECT">DEFECT</mat-option>
         </mat-select>
       </mat-form-field>
 
       <mat-form-field class="full-width">
-        <input matInput placeholder="Local" fromGroupName="place">
+        <input matInput placeholder="Local" formControlName="place">
       </mat-form-field>
 
       <mat-form-field class="full-width">
-        <input matInput placeholder="Impacto" fromGroupName="damage">
+        <input matInput placeholder="Impacto" formControlName="damage">
       </mat-form-field>
 
       <mat-form-field class="full-width">
-        <input matInput placeholder="Peça" fromGroupName="part">
+        <input matInput placeholder="Cod. Veiculo/Peça" formControlName="part">
       </mat-form-field>
 
       <mat-form-field class="full-width">
-        <input matInput placeholder="Veiculo" fromGroupName="vehicle">
+        <mat-label>Não Conformidade</mat-label>
+        <mat-select formControlName="nonCompliance">
+          <mat-option value="ISO26262">NC ISO 26262</mat-option>
+          <mat-option value="ISO55744">NC ISO 55744</mat-option>
+          <mat-option value="ISO34223">NC ISO 34223</mat-option>
+          <mat-option value="ISO21234">NC ISO 21234</mat-option>
+          <mat-option value="ISO67867">NC ISO 67867</mat-option>
+          <mat-option value="ISO78978">NC ISO 78978</mat-option>
+        </mat-select>
       </mat-form-field>
 
     </form>
